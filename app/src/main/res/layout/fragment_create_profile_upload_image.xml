@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".view.CreateProfile.FragmentUploadImage">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="100"
+            android:progressTint="@color/orange_hotspot"
+            />
+    <ProgressBar
+        android:id="@+id/progressBarIndeterminate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/orange_hotspot"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingTop="10dp"
+            android:text="@string/upload_a_photo"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="10dp"
+            android:text="@string/you_need_one_photo_n_in_order_to_participate_in_hotspots"
+            android:textAlignment="center"
+            android:textColor="#c5c5c5"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="30dp"/>
+        <ImageView
+            android:id="@+id/uploadPhoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/vector_add_photo_alternate"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custom_button"
+        android:textColor="#f7f7f7"
+        android:text="@string/create_account"
+            android:alpha="0.1"
+        android:textAllCaps="false"
+        />
+
+
+                <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+
+            android:src="@drawable/hotspot_logo" />
+
+
+
+
+</LinearLayout>

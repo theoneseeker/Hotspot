@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".view.PhoneAuth.ActivityPhoneAuthentification">
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/vector_android_phone" />
+    <LinearLayout
+        android:id="@+id/enterNumberLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone Number"
+            android:textAlignment="center"
+            android:textColor="#000"
+            />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter your phone number to continue"
+            android:textAlignment="center"
+            android:textColor="#777777"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ccp_countryPreference="dk"
+                app:ccp_defaultPhoneCode="45"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="@color/black"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textColorHint="#c5c5c5"
+                android:text="22481046"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ccp"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_error_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/phoneNumberEditText"
+                android:src="@drawable/vector_error"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/phoneAuthContinueButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#f7f7f7"
+            android:alpha="0.1"
+            android:text="Continue"
+            android:textAllCaps="false"
+
+            />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:minWidth="250dp"
+            android:max="100"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:progress="1"
+            android:indeterminateTint="#FFF18239"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/enterVerificationLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Verification Code"
+            android:textAlignment="center"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:id="@+id/PhoneNumberSentTo"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter 6-digit verification code sent to 11 22 33 44"
+            android:textAlignment="center"
+            android:textColor="#777777"
+
+            />
+
+        <EditText
+            android:id="@+id/verifyCodeTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:hint="123 456"
+            android:text="112233"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textColorHint="#c5c5c5"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#f7f7f7"
+            android:text="Submit code"
+            android:alpha="1"
+            android:textAllCaps="false"
+            />
+        <TextView
+            android:id="@+id/resendText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i_did_not_receive_a_verification_code_resend"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textColor="#777777"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            />
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:minWidth="250dp"
+            android:max="100"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:progress="1"
+            android:indeterminateTint="#FFF18239"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/hotspot_logo" />
+    </LinearLayout>
+</LinearLayout>

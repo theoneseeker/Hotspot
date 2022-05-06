@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Favorites"
+    >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVfavorites"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/emptyListView"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:text="@string/no_favorite_hotspots"
+        android:textSize="25sp"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="75dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/emptyHeartView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:visibility="gone"
+        android:layout_marginStart="175dp"
+        android:src="@drawable/heart_outline" />
+</FrameLayout>

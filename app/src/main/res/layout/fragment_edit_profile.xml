@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        >
+
+
+        <TextView
+            android:id="@+id/fragment_edit_profile_headline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingStart="0dp"
+            android:paddingTop="0dp"
+            android:text="@string/edit_profil"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:text="@string/Done"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<ScrollView
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.Profile.FragmentEditProfile"
+    android:fillViewport="false"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f7f7f7"
+        >
+
+
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fragment_edit_profile_edit_picture"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/circle_for_profile_picture"
+            android:elevation="36dp"
+            app:civ_border_color="#40000000"
+            app:civ_border_width="1dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/fragment_edit_profile_headline_tv"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_edid_profile_change_pic_btn"
+            />
+
+        <Button
+            android:id="@+id/fragment_edid_profile_change_pic_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:minHeight="0dp"
+            android:text="Change picture"
+            android:elevation="16dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+
+            android:layout_gravity="center_horizontal"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </Button>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_profile_message"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="left"
+            android:textAllCaps="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            />
+        <EditText
+            android:id="@+id/edit_profile_BioText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:textColor="#80000000"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/bio_text"
+            android:inputType="textMultiLine|text"
+            android:minHeight="80dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="left"
+            android:textAllCaps="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_profile_new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:autofillHints="emailAddress"
+            android:background="@color/white"
+            android:textColor="#80000000"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:minHeight="48dp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/vector_email"
+            android:drawablePadding="16dp"
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/sign_out"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+
+            android:src="@drawable/hotspot_logo" />
+
+        <TextView
+            android:id="@+id/tv_delete_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/delete_account"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            />
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

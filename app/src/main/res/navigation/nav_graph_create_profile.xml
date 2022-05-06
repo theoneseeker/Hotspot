@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_create_profile"
+    app:startDestination="@id/createProfileName">
+
+    <fragment
+        android:id="@+id/createProfileName"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentProfileName"
+        android:label="create_profile_name_fragment"
+        tools:layout="@layout/fragment_create_profile_name" >
+        <action
+            android:id="@+id/action_createProfileName_to_createProfileAgeFragment"
+            app:destination="@id/createProfileAgeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProfileAgeFragment"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentAge"
+        android:label="create_profile_age_fragment"
+        tools:layout="@layout/fragment_create_profile_age" >
+        <action
+            android:id="@+id/action_createProfileAgeFragment_to_fragmentEmail"
+            app:destination="@id/fragmentEmail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProfileGenderFragment"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentGender"
+        android:label="create_profile_gender_fragment"
+        tools:layout="@layout/fragment_create_profile_gender" >
+        <action
+            android:id="@+id/action_createProfileGenderFragment_to_fragmentProfileText"
+            app:destination="@id/fragmentProfileText"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProfileUploadImageFragment"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentUploadImage"
+        android:label="fragment_create_profile_upload_image"
+        tools:layout="@layout/fragment_create_profile_upload_image" />
+    <fragment
+        android:id="@+id/fragmentProfileText"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentProfileText"
+        android:label="fragment_profile_text"
+        tools:layout="@layout/fragment_create_profile_profile_text" >
+        <action
+            android:id="@+id/action_fragmentProfileText_to_createProfileUploadImageFragment"
+            app:destination="@id/createProfileUploadImageFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEmail"
+        android:name="com.example.hotspot.view.CreateProfile.FragmentEmail"
+        android:label="fragment_create_profile_email"
+        tools:layout="@layout/fragment_create_profile_email" >
+        <action
+            android:id="@+id/action_fragmentEmail_to_createProfileGenderFragment"
+            app:destination="@id/createProfileGenderFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>
